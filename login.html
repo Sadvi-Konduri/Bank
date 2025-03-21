@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: pink;
+            background-image: url('https://img.freepik.com/free-vector/abstract-technology-particle-background_23-2148426649.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713225600&semt=ais');
+            background-repeat: no-repeat;
+             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+            width: 300px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 10px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            width: 100%;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.5;
+        }
+
+
+        .container {
+            padding: 25px;
+            background-color: lightblue;
+        }
+
+        .back-button {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <form  name="login" action="login.jsp" method="post">
+        <center>
+            <h1>Login Form</h1>
+        </center>
+        <div class="container">
+            <label>Acc_number </label>
+            <input type="text" placeholder="Enter acc_num" name="acc_num" required>
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" name="pwd" required>
+          <input type="submit"/>
+		  
+		
+            <p>Don't have an account? <a href="user.html">Sign up</a></p>
+        </div>
+    </form>
+    <a href="home.html" class="back-button"><button>BACK</button></a>
+     
+</body>
+</html>

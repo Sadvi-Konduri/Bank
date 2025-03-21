@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: pink;
+            background-image: url('https://5.imimg.com/data5/SELLER/Default/2023/8/335623238/AU/TD/CV/2749969/bank-management-software-service-500x500.jpg');
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+        }
+
+        button {
+            background-color: #4CAF50;
+            width: 100%;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+            width: 500px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <form method="POST" action="register.jsp" name="register" onsubmit="return validateForm()">
+        <center>
+            <h1>Account Creation Form</h1>
+            <table>
+                <tr>
+                    <td>Enter Account Number:</td>
+                    <td><input type="text" placeholder="Enter acc_num (10 digits)" name="acc_num" pattern="[0-9]{10}" title="Please enter exactly 10 digits" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter holder Name:</td>
+                    <td><input type="text" name="name"/></td>
+                </tr>
+                <tr>
+                    <td> Enter holder Age:</td>
+                    <td><input type="number" name="age"/></td>
+                </tr>
+                <tr>
+                    <td>Enter holder Address:</td>
+                    <td><input type="text" name="addr"/></td>
+                </tr>
+                <tr>
+                    <td>Choose the Gender:</td>
+                    <td><input type="radio" name="gen" value="male"/>:Male</td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td><input type="radio" name="gen" value="female"/>:Female</td>
+                </tr>
+
+                <tr>
+                    <td>Enter holder Ph.No:</td>
+                    <td><input type="number" name="phno"></td>
+                </tr>
+                <tr>
+                    <td>Choose the account type:</td>
+                    <td><input type="radio" name="acc_type" value="Savings_Account"/>:saving</td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td><input type="radio" name="acc_type" value="Current_Account"/>:current</td>
+                </tr>
+                <tr>
+                    <td>Enter Password:</td>
+                    <td><input type="password" name="pwd"/></td>
+                </tr>
+                <tr>
+                    <td>Enter Confirm Password:</td>
+                    <td><input type="password" name="cpwd"/></td>
+                </tr>
+                <tr>
+                    <td>Enter Amount to Account:</td>
+                    <td><input type="number" name="bal"/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" /></td>
+                    <td><input type="reset"/></td>
+                </tr>
+            </table>
+        </center>
+    </form>
+</center>
+<a href="home.html" class="back-button"><button>BACK</button></a>
+
+<script>
+    function validateForm() {
+        var accNum = document.forms["register"]["acc_num"].value;
+        var name = document.forms["register"]["name"].value;
+        var age = document.forms["register"]["age"].value;
+        var addr = document.forms["register"]["addr"].value;
+        var gen = document.forms["register"]["gen"].value;
+        var phno = document.forms["register"]["phno"].value;
+        var accType = document.forms["register"]["acc_type"].value;
+        var pwd = document.forms["register"]["pwd"].value;
+        var cpwd = document.forms["register"]["cpwd"].value;
+        var bal = document.forms["register"]["bal"].value;
+
+        if (accNum == "" || name == "" || age == "" || addr == "" || gen == "" || phno == "" || accType == "" || pwd == "" || cpwd == "" || bal == "") {
+            alert("Please fill out all the fields");
+            return false;
+        }
+
+        if (pwd !== cpwd) {
+            alert("Passwords do not match!");
+            return false;
+        }
+        // Optional: You can perform additional validation here if needed
+
+        return true; // Form submission will continue if all validations pass
+    }
+</script>
+</body>
+</html>

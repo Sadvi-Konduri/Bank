@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Deposit</title>
+    <style>
+	 body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: pink;
+            background-image: url('https://st2.depositphotos.com/3944627/5755/i/450/depositphotos_57555607-stock-illustration-dollars-money-as-business-background.jpg');
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+             background-size: cover;
+        }
+		 button {
+            background-color: #4CAF50;
+            width: 100%;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+        
+        form {
+            border: 2px solid #f1f1f1;
+            width: 400px;
+            padding: 10px;
+            
+            background-color: grey;
+        }
+
+
+        button {
+            background-color: #4CAF50;
+            width: 100%;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Deposit</h1>
+    <form method="post" action="deposit.jsp">
+        <table>
+       <tr><td>Account Number: </td>
+		<td><input type="text" name="accountNumber">
+		</td>
+	</tr>
+	<tr>
+        <td>Amount:</td> 
+		<td><input type="text" name="amount"></td>
+	</tr><br>
+	<tr>
+	
+	    <td> </td>
+        <td><input type="submit" value="Deposit"></td>
+
+		
+	</tr>
+	
+		</table>
+    </form>
+    </center>
+	       <a href="ls.html" class="back-button"><button>BACK</button></a>
+</body>
+</html>
